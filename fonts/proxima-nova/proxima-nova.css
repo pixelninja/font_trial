@@ -1,0 +1,11 @@
+@font-face {
+	font-family: "proxima-nova";
+	src: url(proxima-nova.otf) format("opentype");
+	src: url(proxima-nova.eot) format("embedded-opentype"),
+		 url(proxima-nova.woff) format("woff"),
+		 url(proxima-nova.ttf) format("truetype");
+}
+
+body {
+	font-family: 'proxima-nova', serif;
+}

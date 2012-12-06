@@ -1,0 +1,11 @@
+@font-face {
+	font-family: "ptsans-narrow";
+	src: url(ptsans-narrow.otf) format("opentype");
+	src: url(ptsans-narrow.eot) format("embedded-opentype"),
+		 url(ptsans-narrow.woff) format("woff"),
+		 url(ptsans-narrow.ttf) format("truetype");
+}
+
+body {
+	font-family: 'ptsans-narrow', serif;
+}

@@ -3,7 +3,8 @@ $(document).ready(function() {
 /* submit selectbox on change
 =============================*/
 
-	$('form').on('change mousedown', 'option', function() {
+	$('form').on('change', 'select', function() {
+		console.log('dsf');
 		$(this).closest('form').submit();
 	});
 	

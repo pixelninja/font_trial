@@ -50,11 +50,15 @@
 		?>
 				
 		<script src="assets/jquery.js"></script>
-		<script src="assets/common.js"></script>
 	</head>
 	
 	<body>
+			
 		<div id="header" class="container_16 clearfix">
+			<nav class="grid_16">
+				<a href="<?php echo 'http://' . $_SERVER['SERVER_NAME'] . '/webfontspecimen/upload.php'; ?>">Upload font</a>
+			</nav>
+			
 			<!-- font selector -->
 			<div class="grid_16">
 				<form method="get">
@@ -85,7 +89,7 @@
 			<div class="grid_16">
 				<h1>
 					<?php 
-						echo 'Proxima Nova';
+						echo createName($active['name']);
 					 ?>
 				</h1>
 			</div>
@@ -145,24 +149,74 @@
 		
 		<div class="container_16 clearfix">
 			<div class="grid_16 clearfix">
-				<h2>Grayscale <span>&#8211; CSS hex color</span></h2>
+				<h2>Contrast <span>&#8211; CSS hex color</span></h2>
 			</div>
-		
-			<div class="grayscale clearfix">
+			
+			<div class="clearfix">
+				<div class="grid_8">
+					<form method="post">
+						<label>
+							<span>Left hex code</span>
+							<input type="text" name="left-colour" placeholder="#ffffff" rel="container-colour" />
+						</label>
+					</form>
+				</div>
+				<div class="grid_8">
+					<form method="post">
+						<label>
+							<input type="text" name="right-colour" placeholder="#000000" rel="container-colour" />
+							<span>Right hex code</span>
+						</label>
+					</form>
+				</div>
+			</div>
+			
+			<div class="grayscale clearfix">				
 				<div class="grid_8 white">
-					<p class="c000"><span>#000</span>The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
-					<p class="c333"><span>#333</span>The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
-					<p class="c666"><span>#666</span>The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
-					<p class="c999"><span>#999</span>The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
-					<p class="cCCC"><span>#CCC</span>The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
+					<p class="c000">
+						<span>#000</span>
+						<input type="input" data-value="#000" rel="para-colour" />
+						The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to
+					</p>
+					<p class="c333">
+						<span>#333</span>
+						<input type="input" data-value="#333" rel="para-colour" />
+						The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
+					<p class="c666">
+						<span>#666</span>
+						<input type="input" data-value="#666" rel="para-colour" />
+						The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
+					<p class="c999">
+						<span>#999</span>
+						<input type="input" data-value="#999" rel="para-colour" />
+						The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
+					<p class="cCCC">
+						<span>#CCC</span>
+						<input type="input" data-value="#ccc" rel="para-colour" />
+						The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
 				</div>
 				
 				<div class="grid_8 black">
-					<p class="cFFF"><span>#FFF</span>The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
-					<p class="cCCC"><span>#CCC</span>The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
-					<p class="c999"><span>#999</span>The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
-					<p class="c666"><span>#666</span>The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
-					<p class="c333"><span>#333</span>The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
+					<p class="cFFF">
+						<span>#FFF</span>
+						<input type="input" data-value="#fff" rel="para-colour" />
+						The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
+					<p class="cCCC">
+						<span>#CCC</span>
+						<input type="input" data-value="#ccc" rel="para-colour" />
+						The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
+					<p class="c999">
+						<span>#999</span>
+						<input type="input" data-value="#999" rel="para-colour" />
+						The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
+					<p class="c666">
+						<span>#666</span>
+						<input type="input" data-value="#666" rel="para-colour" />
+						The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
+					<p class="c333">
+						<span>#333</span>
+						<input type="input" data-value="#333" rel="para-colour" />
+						The best kind of originality is that which comes after a sound apprenticeship, that which shall prove to be the blending of a firm conception of useful precedent and the progressive tendencies of an able mind. For, let a man be as able and original as he may, he cannot afford to</p>
 				</div>
 			</div><!-- end .grayscale -->
 		</div><!-- end .container-16 -->
@@ -221,5 +275,6 @@
 			</div>
 		</div><!-- end #footer -->
 		
+		<script src="assets/common.js"></script>
 	</body>
 </html>

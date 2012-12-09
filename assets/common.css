@@ -163,7 +163,7 @@ a:active {
 -----------------------------------------*/
 .grayscale {
 	clear: both;
-	background: #fff url(images/black.gif) top right repeat-y;
+	/*background: #fff url(images/black.gif) top right repeat-y;*/
 	}
 .grayscale p span {
 	display: block;
@@ -172,13 +172,30 @@ a:active {
 	font-family: Verdana, sans-serif;
 	color: #999;
 	}
-.white p span {
+
+.black,
+.white {
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.black {
+	background-color: #000;
+}
+
+.white p span,
+.white p input {
+	width: 75px;
 	float: left;
 	margin-left: -96px;
 	margin-right: 0;
 	text-align: right;
 	}
-.black p span {
+.black p span,
+.black p input {
+	width: 75px;
 	float: right;
 	margin-left: 0;
 	margin-right: -96px;
@@ -190,6 +207,11 @@ a:active {
 .c999 {	color: #999; }
 .cCCC {	color: #ccc; }
 .cFFF {	color: #fff; }
+
+.white p input,
+.black p input {
+	display: none;
+}
 
 
 /* Size
@@ -229,6 +251,10 @@ form {
 	margin: 25px 0;
 }
 
+.grid_8:last-child form {
+	float: right;
+}
+
 form p {
 	margin: 0 0 10px;
 	font-size: 20px;
@@ -237,6 +263,18 @@ form p {
 form p + span {
 	display: block;
 	margin: -5px 0 10px;
+}
+
+.grid_8:first-child label span {
+	margin-right: 15px;
+}
+
+.grid_8:last-child label span {
+	margin-left: 15px;
+}
+
+.grid_8:last-child label input {
+	text-align: right;
 }
 
 select {

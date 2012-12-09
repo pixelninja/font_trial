@@ -4,7 +4,6 @@ $(document).ready(function() {
 =============================*/
 
 	$('form').on('change', 'select', function() {
-		console.log('dsf');
 		$(this).closest('form').submit();
 	});
 	

@@ -127,7 +127,11 @@
 				<div class="bodysize">
 					<table>
 					<tr>
-						<th>Font name</th>
+						<th>
+							<?php 
+								echo createName($active['name']);
+					 		?>
+						</th>
 						<th>Arial <a href="http://www.codestyle.org/servlets/FontStack?stack=Arial,Helvetica&generic=sans-serif">stack</a></th>
 						<th>Times <a href="http://www.codestyle.org/servlets/FontStack?stack=Times+New+Roman,Times&generic=serif">stack</a></th>
 						<th>Georgia <a href="http://www.codestyle.org/servlets/FontStack?stack=Georgia,New+Century+Schoolbook,Nimbus+Roman+No9+L&generic=serif">stack</a></th>
